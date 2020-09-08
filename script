@@ -1,0 +1,2 @@
+/ppp profile set default on-up=:global addr [:pick [/ip address get [find interface="pppoe-client1"] address] 0 2];\r\n\r\n:if ($addr = 10||$addr = 
+      12) do={\r\n   :log info "IP Lokal..... Redial"\r\n  /interface pppoe-client set pppoe-client1 disabled=no\r\n} 
